@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Input text here ..." minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="d5E-PQ-Fre">
+                                <rect key="frame" x="50" y="50" width="500" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="inputTextFieldChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="Ce1-mY-epq"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cyb-bE-MRw">
+                                <rect key="frame" x="266" y="99" width="69" height="30"/>
+                                <state key="normal" title="Paste text">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pasteTextPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IYg-1K-cXN"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO0-Ld-LYU" userLabel="PastedText">
+                                <rect key="frame" x="50" y="175" width="500" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ciF-jJ-dt7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="d5E-PQ-Fre" secondAttribute="trailing" constant="34" id="0Qo-I4-lME"/>
+                            <constraint firstItem="d5E-PQ-Fre" firstAttribute="bottom" secondItem="Cyb-bE-MRw" secondAttribute="bottom" constant="-49" id="7YN-Y6-Z2v"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xO0-Ld-LYU" secondAttribute="trailing" constant="34" id="8KQ-zy-ugn"/>
+                            <constraint firstAttribute="centerX" secondItem="xO0-Ld-LYU" secondAttribute="centerX" id="8yG-Ro-0Gp"/>
+                            <constraint firstItem="xO0-Ld-LYU" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="F1y-Nx-BZh"/>
+                            <constraint firstItem="d5E-PQ-Fre" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="34" id="FPe-Z3-SUt"/>
+                            <constraint firstItem="d5E-PQ-Fre" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="30" id="NDr-63-lT9"/>
+                            <constraint firstAttribute="centerX" secondItem="Cyb-bE-MRw" secondAttribute="centerX" id="Ot5-tV-RBv"/>
+                            <constraint firstItem="xO0-Ld-LYU" firstAttribute="bottom" secondItem="Cyb-bE-MRw" secondAttribute="bottom" constant="146" id="Z35-rJ-F8p"/>
+                            <constraint firstAttribute="centerX" secondItem="d5E-PQ-Fre" secondAttribute="centerX" id="bFY-e9-VVx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="inputTextField" destination="d5E-PQ-Fre" id="Ahy-HG-uHY"/>
+                        <outlet property="pasteTextButton" destination="Cyb-bE-MRw" id="f4a-2Y-Dd3"/>
+                        <outlet property="pastedTextLabel" destination="xO0-Ld-LYU" id="7uf-nj-xOu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
