@@ -46,9 +46,9 @@
     if( [clipboardText length] )
     {
         self.pastedTextLabel.text = clipboardText;
-        [self.view.superview addSubview:[[SVToast alloc] initWithText:@"Text pasted." andTimeout:1.0]];
+        [self.view addSubview:[[SVToast alloc] initWithText:@"Text pasted." andTimeout:1.0]];
     }
-    else [self.view.superview addSubview:[[SVToast alloc] initWithText:@"Paste failed." andTimeout:1.0]];
+    else [self.view addSubview:[[SVToast alloc] initWithText:@"Paste failed." andTimeout:1.0]];
 }
 
 // Hide the keyboard when Return is pressed
